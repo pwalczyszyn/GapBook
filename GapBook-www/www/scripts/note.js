@@ -94,8 +94,7 @@ function btnPhoto_clickHandler(event) {
 /**
  * Camer success handler
  * 
- * @param photoUrl
- * @returns
+ * @param photoData
  */
 function camera_successHandler(photoData) {
     // Setting #img src to the local file
