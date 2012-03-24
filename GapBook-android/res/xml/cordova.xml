@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cordova>
+    <access origin="http://127.0.0.1*"/>
+    <access origin="https://api.parse.com"/>
+    <log level="DEBUG"/>
+</cordova>
