@@ -19,12 +19,18 @@ function notePage_pageinitHandler(event) {
         $('#txtContent').val(currentNote.content);
         // Loading photo if available
         if (currentNote.photo) {
+            $.mobile.showPageLoadingMsg("a", "Loading photo...", true);
             $.get(currentNote.photo.url, function (data) {
+                $.mobile.hidePageLoadingMsg();
                 $('#img').attr('src', data);
             });
         }
     } else {
-        currentNote = {title:'', content:'', photo:null};
+        currentNote = {
+            title:'',
+            content:'',
+            photo:null
+        };
     }
 
     // Registering btnBack click handler
@@ -41,10 +47,10 @@ function notePage_pageinitHandler(event) {
  * @param event
  */
 function btnBack_clickHandler(event) {
-    var title = $('#txtTitle').val(),
-        content = $('#txtContent').val();
+    var title = $('#txtTitle').val(), content = $('#txtContent').val();
 
-    if (currentNote.title != title || currentNote.content != content || newPhoto != null)
+    if (currentNote.title != title || currentNote.content != content
+        || newPhoto != null)
     // Saving and closing current note
         saveAndClose(null);
     else
@@ -63,12 +69,12 @@ function saveAndClose(newPhotoRef) {
     if (!isNew && newPhoto && !newPhotoRef) {
         // Saving new photo
         savePhoto();
-        // Returning saveNote function it will be automatically called after new photo
+        // Returning saveNote function it will be automatically called after new
+        // photo
         return;
     }
 
-    var title = $('#txtTitle').val(),
-        content = $('#txtContent').val();
+    var title = $('#txtTitle').val(), content = $('#txtContent').val();
 
     // Setting title if it has changed
     if (currentNote.title != title)
@@ -130,7 +136,7 @@ function savePhoto() {
         url:'https://api.parse.com/1/files/photo.b64',
         type:'POST',
         contentType:'text/plain',
-        data:'data:image/jpeg;base64,' + photoData,
+        data:'data:image/jpeg;base64,' + newPhoto,
         error:ajax_errorHandler,
         success:function (result) {
             $.mobile.hidePageLoadingMsg();
@@ -139,9 +145,15 @@ function savePhoto() {
     });
 }
 
+/**
+ * Navigating back
+ */
 function close() {
+
+    currentNote = null;
+
     // Returning back to the list view
-    $.mobile.changePage("index.html");
+    window.history.back();
 
     // Reloading notes list after save
     loadNotes();
@@ -173,13 +185,13 @@ function camera_successHandler(photoData) {
     // Setting #img src to the local file
     $('#img').attr('src', 'data:image/jpeg;base64,' + photoData);
 
+    // Setting global variable with new photo data
     newPhoto = photoData;
-
-
 }
 
 /**
- * Handles ajax requests error events, by popping an alert and writing response object structure
+ * Handles ajax requests error events, by popping an alert and writing response
+ * object structure
  *
  * @param jqXHR
  * @param textStatus
