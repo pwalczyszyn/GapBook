@@ -49,7 +49,7 @@ function btnBack_clickHandler(event) {
         saveAndClose(null);
     else
     // Returning back to the list view
-        $.mobile.changePage("index.html");
+        close();
 
 }
 
