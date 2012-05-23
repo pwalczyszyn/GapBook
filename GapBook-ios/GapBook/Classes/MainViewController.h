@@ -16,20 +16,21 @@
  specific language governing permissions and limitations
  under the License.
  */
+
 //
-//  main.m
-//  GapBook-ios
+//  MainViewController.h
+//  GapBook
 //
-//  Created by Piotr Walczyszyn on 3/24/12.
+//  Created by Piotr Walczyszyn on 5/23/12.
 //  Copyright pwalczys@adobe.com 2012. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#ifdef CORDOVA_FRAMEWORK
+    #import <Cordova/CDVViewController.h>
+#else
+    #import "CDVViewController.h"
+#endif
 
-int main(int argc, char *argv[]) {
-    
-    NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
-    int retVal = UIApplicationMain(argc, argv, nil, @"AppDelegate");
-    [pool release];
-    return retVal;
-}
+@interface MainViewController : CDVViewController
+
+@end

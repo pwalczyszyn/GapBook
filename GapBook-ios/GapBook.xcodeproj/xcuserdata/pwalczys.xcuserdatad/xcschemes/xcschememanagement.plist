@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>GapBook-ios.xcscheme</key>
+		<key>GapBook.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>CC7DA2F6151DEBF600466791</key>
+		<key>CC25572A156D084E000FF669</key>
 		<dict>
 			<key>primary</key>
 			<true/>

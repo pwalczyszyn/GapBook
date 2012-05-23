@@ -13,10 +13,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CC7DA2F6151DEBF600466791"
-               BuildableName = "GapBook-ios.app"
-               BlueprintName = "GapBook-ios"
-               ReferencedContainer = "container:GapBook-ios.xcodeproj">
+               BlueprintIdentifier = "CC25572A156D084E000FF669"
+               BuildableName = "GapBook.app"
+               BlueprintName = "GapBook"
+               ReferencedContainer = "container:GapBook.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -31,10 +31,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CC7DA2F6151DEBF600466791"
-            BuildableName = "GapBook-ios.app"
-            BlueprintName = "GapBook-ios"
-            ReferencedContainer = "container:GapBook-ios.xcodeproj">
+            BlueprintIdentifier = "CC25572A156D084E000FF669"
+            BuildableName = "GapBook.app"
+            BlueprintName = "GapBook"
+            ReferencedContainer = "container:GapBook.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -50,10 +50,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CC7DA2F6151DEBF600466791"
-            BuildableName = "GapBook-ios.app"
-            BlueprintName = "GapBook-ios"
-            ReferencedContainer = "container:GapBook-ios.xcodeproj">
+            BlueprintIdentifier = "CC25572A156D084E000FF669"
+            BuildableName = "GapBook.app"
+            BlueprintName = "GapBook"
+            ReferencedContainer = "container:GapBook.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -68,10 +68,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CC7DA2F6151DEBF600466791"
-            BuildableName = "GapBook-ios.app"
-            BlueprintName = "GapBook-ios"
-            ReferencedContainer = "container:GapBook-ios.xcodeproj">
+            BlueprintIdentifier = "CC25572A156D084E000FF669"
+            BuildableName = "GapBook.app"
+            BlueprintName = "GapBook"
+            ReferencedContainer = "container:GapBook.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

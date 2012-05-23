@@ -19,9 +19,9 @@
 
 //
 //  AppDelegate.h
-//  GapBook-ios
+//  GapBook
 //
-//  Created by Piotr Walczyszyn on 3/24/12.
+//  Created by Piotr Walczyszyn on 5/23/12.
 //  Copyright pwalczys@adobe.com 2012. All rights reserved.
 //
 
@@ -34,17 +34,15 @@
 #endif
 
 
-@interface AppDelegate : NSObject < UIApplicationDelegate, UIWebViewDelegate, CDVCommandDelegate > {
+@interface AppDelegate : NSObject < UIApplicationDelegate > {
 
-	NSString* invokeString;
 }
 
 // invoke string is passed to your app on launch, this is only valid if you 
-// edit FooBar.plist to add a protocol
+// edit GapBook-Info.plist to add a protocol
 // a simple tutorial can be found here : 
 // http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
 
-@property (nonatomic, copy)  NSString* invokeString;
 @property (nonatomic, retain) IBOutlet UIWindow* window;
 @property (nonatomic, retain) IBOutlet CDVViewController* viewController;
 
